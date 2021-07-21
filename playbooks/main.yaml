@@ -1,0 +1,7 @@
+- hosts: all
+  become: yes
+  remote_user: ubuntu
+  tasks:
+   - name: Setting up the nodes
+     import_tasks: ../tasks/general_tasks.yml
+  

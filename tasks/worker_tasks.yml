@@ -1,0 +1,8 @@
+- name: Copying the script to the workers
+  copy:
+   src: ../scripts/worker.sh
+   dest: /home/ubuntu
+   owner: ubuntu
+   mode: 0755
+- name: Running the script
+  shell: bash /home/ubuntu/worker.sh

@@ -1,0 +1,9 @@
+- name: copy script
+  copy:
+    src: ../scripts/master.sh
+    dest: /home/ubuntu
+    owner: ubuntu
+    mode: 0777
+- name: Install k3s
+  command: sh /home/ubuntu/master.sh
+     

@@ -1,0 +1,6 @@
+- hosts: master
+  become: yes
+  remote_user: ubuntu
+  tasks:
+    - name: Master Node Setup
+      import_tasks: ../tasks/master.yml

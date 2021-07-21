@@ -1,0 +1,7 @@
+- hosts: workers
+  remote_user: ubuntu
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Setting up the worker nodes
+      include_tasks: ../tasks/worker_tasks.yml

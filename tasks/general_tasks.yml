@@ -1,0 +1,13 @@
+---
+# tasks file for rpi
+- name: apt update
+  ansible.builtin.apt:
+    update_cache: yes
+- name: docker_install
+  ansible.builtin.apt:
+    name: docker.io
+- name: systemctl start and enable docker
+  ansible.builtin.systemd:
+    name: docker
+    state: started
+    enabled: yes 
