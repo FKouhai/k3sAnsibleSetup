@@ -6,4 +6,9 @@
     mode: 0777
 - name: Install k3s
   command: sh /home/ubuntu/master.sh
+- name: Fetch the node Token
+  fetch:
+    src: /var/lib/rancher/k3s/server/node-token
+    dest: node-token
+    flat: yes
      

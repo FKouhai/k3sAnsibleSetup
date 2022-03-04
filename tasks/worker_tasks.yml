@@ -4,5 +4,11 @@
    dest: /home/ubuntu
    owner: ubuntu
    mode: 0755
+- name: Copying the Node Token from master
+  copy:
+   src: ./node-token
+   dest: /home/ubuntu/
+   owner: ubuntu
+   mode: 0444
 - name: Running the script
   shell: bash /home/ubuntu/worker.sh
