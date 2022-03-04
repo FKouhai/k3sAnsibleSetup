@@ -1,0 +1,6 @@
+- hosts: all
+  become: yes
+  remote_user: ubuntu
+  tasks:
+   - name: Removing K3S from the master
+     import_tasks: ../tasks/remove_k3s.yml

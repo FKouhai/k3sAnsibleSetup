@@ -1,0 +1,7 @@
+- name: Uninstall K3S master
+  command: k3s-uninstall.sh
+  when: ansible_hostname == "master"
+- name: uninstall K3S workers
+  command: k3s-agent-uninstall.sh
+  when: ansible_hostname != "master"
+
