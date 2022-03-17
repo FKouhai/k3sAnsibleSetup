@@ -1,0 +1,2 @@
+- name: Label Workers
+  command: kubectl label nodes worker* worker

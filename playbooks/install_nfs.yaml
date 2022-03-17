@@ -1,0 +1,8 @@
+- hosts: all
+  become: yes
+  remote_user: ubuntu
+  tasks:
+    - name: Installing nfs clients
+      import_tasks: ../tasks/nfs-client.yml
+    - name: Mounting the NFS share
+      import_tasks: ../tasks/nfs-shares.yml

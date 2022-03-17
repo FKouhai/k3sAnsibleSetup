@@ -1,0 +1,6 @@
+- name: Installing NFS on the clients
+  apt: 
+    name: nfs-common
+    state: latest
+    update_cache: yes
+

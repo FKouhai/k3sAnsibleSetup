@@ -1,0 +1,12 @@
+- name: Creating the nfs destiny directory on the clients
+  file:
+    path: /mnt/nfs
+    state: directory
+    mode: '0755'
+- name: Mounting share on the clients
+  ansible.posix.mount:
+    src: mynas:/srv/nfs
+    path: /mnt/nfs
+    state: mounted
+    opts: rw,sync,hard,intr
+    fstype: nfs
